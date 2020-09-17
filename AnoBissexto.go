@@ -49,7 +49,7 @@ func MessageHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
-	headers := handlers.AllowedHeaders([]string{"X-Request", "Content-Type", "Authorization"})
+	headers := handlers.AllowedHeaders([]string{"X-Request", "Content-Type", "Authorization", "/"})
 	methods := handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE"})
 	origins := handlers.AllowedOrigins([]string{"http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz/"})
 
