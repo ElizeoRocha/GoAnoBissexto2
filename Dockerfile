@@ -7,6 +7,7 @@ ADD . /app
 WORKDIR /app
 
 RUN go get github.com/gorilla/mux
+RUN go get github.com/gorilla/handlers
 
 RUN go build -o main .
 
