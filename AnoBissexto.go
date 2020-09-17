@@ -51,7 +51,7 @@ func main() {
 
 	headers := handlers.AllowedHeaders([]string{"X-Request", "Content-Type", "Authorization"})
 	methods := handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE"})
-	origins := handlers.AllowedOrigins([]string{"http://localhost:4200"})
+	origins := handlers.AllowedOrigins([]string{"http://app-ano-bissexto-anobissexto.paulo-dev-apps.gncloud.nz"})
 
 	r.HandleFunc("/{ano}", getAno).Methods("GET")
 	r.HandleFunc("/", logHandler(listarAnos)).Methods("GET")
